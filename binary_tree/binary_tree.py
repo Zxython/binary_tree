@@ -237,6 +237,7 @@ sum()""")
         self.list = []
         if data is None:
             return
+        data = binary_tree.__optimizeList(data)
         for datum in data:
             binary_tree.append(self, datum)
 
