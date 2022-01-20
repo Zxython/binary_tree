@@ -1,5 +1,5 @@
 # binary_tree
-This is a very simple class I made for creating a binary tree in python
+This is a very simple package I made
 
 To install just run this command in your terminal
 
