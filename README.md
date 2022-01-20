@@ -19,9 +19,9 @@ If you're on pycharm
 
 -----------------------------------------------------------------------
 
-To use simply type from 
+To use simply type
 
-binary_tree.binary_tree import binary_tree as tree
+from binary_tree.binary_tree import binary_tree as tree
 
 for help type
 
