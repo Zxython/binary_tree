@@ -1,9 +1,22 @@
 # binary_tree
 This is a very simple package I made
 
+installation
+------------
+
 To install just run this command in your terminal
 
 pip install https://github.com/Zxython/binary_tree/archive/refs/heads/main.zip
+
+updating
+--------
+to update run these three commands and anwser yes when asked to confirm deletion
+
+pip uninstall binary_tree
+
+pip install https://github.com/Zxython/binary_tree/archive/refs/heads/main.zip
+
+pip --version
   
 -----------------------------------------------------------------------
 Alternative Installation
