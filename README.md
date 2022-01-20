@@ -30,20 +30,28 @@ tree.help.all()
 Example Code
 ------------
 
-from binary_tree.binary_tree import binary_tree as tree
+from binary_tree.binary_tree import binary_tree as tree, optimizeList
 
-my_tree = tree([1, 2, 3, 4, 5])
+my_tree = tree(optimizeList([1, 2, 3, 4, 5]))
 
-my_tree.append(3)
+my_tree = my_tree + 2
+
+my_tree.sort()
 
 print(my_tree)
 
 my_tree.append([0, 6])
 
-my_tree -= 3
+my_tree -= [3, 2]
+
+my_tree -= -1
 
 print(f"Tree: {my_tree}")
 
 print(f"Mean: {my_tree.mean}")
 
 print(f"Standard Deviation: {my_tree.standard_deviation}")
+
+tree1, tree2 = my_tree.split()
+
+print(tree1, tree2)
