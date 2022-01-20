@@ -14,10 +14,8 @@ If you need git you can downoad it from here
 
 If you're on pycharm
 1) Open pycharm
-2) go to packages and search for pip
-3) install pip
-4) go to pycharm terminal located at bottom of pycharm
-5) type in pip install git+https://github.com/Zxython/binary_tree
+2) Go to pycharm terminal
+3) type in pip install git+https://github.com/Zxython/binary_tree
 
 -----------------------------------------------------------------------
 
