@@ -6,23 +6,19 @@ To install just run this command in your terminal
   pip install git+https://github.com/Zxython/binary_tree
   
 -----------------------------------------------------------------------
-If you need git you can downoad it from here
-
-  https://git-scm.com/downloads
-
------------------------------------------------------------------------
-
-If you're on pycharm
-1) Open pycharm
-2) Go to pycharm terminal
-3) type in pip install git+https://github.com/Zxython/binary_tree
+Alternatively 
+1) download this as a zip file
+2) navigate to the file in file explorer
+3) copy the path to the zip file
+4) It should look like this C:\Users\USER\Downloads\binary_tree-main.zip
+5) in pycharm terminal type pip install C:\Users\USER\Downloads\binary_tree-main.zip
 
 -----------------------------------------------------------------------
 
-To use simply type
+To use import it type
 
 from binary_tree.binary_tree import binary_tree as tree
 
-for help type
+for instructions on how to use it type
 
 tree.help.all()
