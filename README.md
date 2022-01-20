@@ -15,7 +15,7 @@ Alternatively
 
 -----------------------------------------------------------------------
 
-To use import it type
+To import it type
 
 from binary_tree.binary_tree import binary_tree as tree
 
