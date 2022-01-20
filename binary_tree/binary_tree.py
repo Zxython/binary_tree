@@ -21,6 +21,11 @@ class binary_tree:
                 print("tree.copy(): This will return a copy of the tree")
 
             @staticmethod
+            def split():
+                print("tree.split(): This will remove the top value in the binary tree and return the two"
+                      "resulting trees created")
+
+            @staticmethod
             def all():
                 binary_tree.help.functions.append()
                 print()
@@ -29,6 +34,8 @@ class binary_tree:
                 binary_tree.help.functions.sort()
                 print()
                 binary_tree.help.functions.copy()
+                print()
+                binary_tree.help.functions.split()
 
         class properties:
             @staticmethod
@@ -268,6 +275,14 @@ sum()""")
     def copy(self):
         return binary_tree(self)
 
+    def split(self):
+        tree1 = binary_tree()
+        tree2 = binary_tree()
+        for x in self.list:
+            if x < self.binary_tree.data: tree1.append(x); continue
+            if x > self.binary_tree.data: tree2.append(x)
+        return tree1, tree2
+
     @property
     def mean(self):
         return sum(self.list) / len(self.list)
@@ -453,4 +468,3 @@ sum()""")
 
     def __ne__(self, other):
         return not binary_tree.__eq__(self, other)
-    
