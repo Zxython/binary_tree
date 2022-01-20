@@ -440,7 +440,7 @@ sum()""")
             if other in self:
                 self.list.remove(other)
                 return binary_tree(self.list)
-            return self
+        return self
 
     def __iadd__(self, other):
         return self.__add__(other)
