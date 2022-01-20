@@ -3,7 +3,7 @@ This is a very simple package I made
 
 To install just run this command in your terminal
 
-  pip install git+https://github.com/Zxython/binary_tree
+pip install https://github.com/Zxython/binary_tree/archive/refs/heads/main.zip
   
 -----------------------------------------------------------------------
 Alternatively 
