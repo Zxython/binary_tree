@@ -1,4 +1,4 @@
-def __optimizeList(items):
+def optimizeList(items):
     def opt(items, iteration=0):
         new_list = []
         if len(items) in [0, 1]:
