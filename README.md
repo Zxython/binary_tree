@@ -1,7 +1,7 @@
 # binary_tree
 This is a very simple class I made for creating a binary tree in python
 
-To install just run this command in your terminal
+To install just run this pycharm command in your terminal
 pip install git+https://github.com/Zxython/binary_tree
 
 To use simply type from 
