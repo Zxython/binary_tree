@@ -22,7 +22,7 @@ If you need git you can downoad it from here
 
 Or if you are using anaconda you can use this command in your terminal
 
-  conda install git
+  conda install git pip
 
 -----------------------------------------------------------------------
 
