@@ -27,7 +27,9 @@ Or if you are using anaconda you can use this command in your terminal
 -----------------------------------------------------------------------
 
 To use simply type from 
+
 binary_tree.binary_tree import binary_tree as tree
 
 for help type
+
 tree.help.all()
