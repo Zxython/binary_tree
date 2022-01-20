@@ -3,6 +3,7 @@ This is a very simple class I made for creating a binary tree in python
 
 To install just run this command in your terminal
 
+pip install git.python
 pip install git+https://github.com/Zxython/binary_tree
 
 If you're on pycharm
