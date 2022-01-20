@@ -4,8 +4,8 @@ def optimizeList(items):
         if len(items) in [0, 1]:
             return items
         new_list.append(items[len(items) // 2])
-        new_list.append(optimizeList(items[:len(items) // 2], iteration + 1))
-        new_list.append(optimizeList(items[len(items) // 2 + 1:], iteration + 1))
+        new_list.append(opt(items[:len(items) // 2], iteration + 1))
+        new_list.append(opt(items[len(items) // 2 + 1:], iteration + 1))
         if iteration != 0:
             return new_list
         lst = []
