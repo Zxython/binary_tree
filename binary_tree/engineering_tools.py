@@ -181,6 +181,7 @@ def deg_to_rad(degrees):
     from math import pi
     return degrees * pi / 180
 
+
 class engineering_tools:
     class help:
         @staticmethod
