@@ -1,6 +1,8 @@
 # binary_tree
 This is a very simple package I made
 
+The engineering tools can be used to calculate uncertainty in measurements
+
 installation
 ------------
 
