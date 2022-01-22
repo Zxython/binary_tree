@@ -207,5 +207,5 @@ class engineering_tools:
         
         @staticmethod
         def trig_methods():
-            print("These trig methods are different from the ones found in the mat module as they are compatible"
+            print("These trig methods are different from the ones found in the math module as they are compatible"
                   "with the variable() datatype")
