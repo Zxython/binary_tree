@@ -179,12 +179,12 @@ def arccot(expression):
 
 def log(expression, base=10):
     from sympy import log
-    return log(expression, base)
+    return log(expression * 1, base)
 
 
 def ln(expression):
     from sympy import log
-    return log(expression)
+    return log(expression * 1)
 
 
 def deg_to_rad(degrees):
