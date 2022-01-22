@@ -27,6 +27,11 @@ class variable:
         if type(power) is variable:
             return self.variable[0] ** power.variable[0]
         return self.variable[0] ** power
+    
+    def __rpow__(self, power, modulo=None):
+        if type(power) is variable:
+            return power.variable[0] ** self.variable[0]
+        return power ** self.variable[0]
 
     def __mul__(self, other):
         if type(other) is not variable:
