@@ -103,62 +103,62 @@ def uncertainty(function, *variables):
 
 def sin(expression):
     from sympy import sin
-    return sin(expression)
+    return sin(expression * 1)
 
 
 def cos(expression):
     from sympy import cos
-    return cos(expression)
+    return cos(expression * 1)
 
 
 def tan(expression):
     from sympy import tan
-    return tan(expression)
+    return tan(expression * 1)
 
 
 def csc(expression):
     from sympy import csc
-    return csc(expression)
+    return csc(expression * 1)
 
 
 def sec(expression):
     from sympy import sec
-    return sec(expression)
+    return sec(expression * 1)
 
 
 def cot(expression):
     from sympy import cot
-    return cot(expression)
+    return cot(expression * 1)
 
 
 def arcsin(expression):
     from sympy import asin
-    return asin(expression)
+    return asin(expression * 1)
 
 
 def arccos(expression):
     from sympy import acos
-    return acos(expression)
+    return acos(expression * 1)
 
 
 def arctan(expression):
     from sympy import atan
-    return atan(expression)
+    return atan(expression * 1)
 
 
 def arccsc(expression):
     from sympy import acsc
-    return acsc(expression)
+    return acsc(expression * 1)
 
 
 def arcsec(expression):
     from sympy import asec
-    return asec(expression)
+    return asec(expression * 1)
 
 
 def arccot(expression):
     from sympy import acot
-    return acot(expression)
+    return acot(expression * 1)
 
 
 def deg_to_rad(degrees):
