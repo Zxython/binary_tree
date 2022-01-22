@@ -1,23 +1,3 @@
-def optimizeList(items):
-    def opt(items, iteration=0):
-        new_list = []
-        if len(items) in [0, 1]:
-            return items
-        new_list.append(items[len(items) // 2])
-        new_list.append(opt(items[:len(items) // 2], iteration + 1))
-        new_list.append(opt(items[len(items) // 2 + 1:], iteration + 1))
-        if iteration != 0:
-            return new_list
-        lst = []
-        while new_list:
-            x = new_list.pop(0)
-            if type(x) == list:
-                new_list.extend(x)
-            else:
-                lst.append(x)
-        return lst
-    return opt(items)
-
 class binary_tree:
     class help:
         class functions:
@@ -264,6 +244,7 @@ sum()""")
         self.list = []
         if data is None:
             return
+        data = binary_tree.__optimizeList(data)
         for datum in data:
             binary_tree.append(self, datum)
 
@@ -330,6 +311,10 @@ sum()""")
         for x in self.list:
             sum += abs(x - mean) ** 2
         return (sum / len(self.list)) ** 0.5
+
+    @property
+    def uncertainty(self):
+        return self.standard_deviation / (len(self) ** 0.5)
 
     def __sort(self):
         temp = [None]
