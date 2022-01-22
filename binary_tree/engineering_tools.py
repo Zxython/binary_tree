@@ -177,6 +177,16 @@ def arccot(expression):
     return acot(expression * 1)
 
 
+def log(expression, base=10):
+    from sympy import log
+    return log(expression, base)
+
+
+def ln(expression):
+    from sympy import log
+    return log(expression)
+
+
 def deg_to_rad(degrees):
     from math import pi
     return degrees * pi / 180
