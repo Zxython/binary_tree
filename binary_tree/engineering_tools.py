@@ -112,7 +112,6 @@ def uncertainty(function, *variables, equation=False, partial_derivatives=False)
         stringTemp += "\b\b\b)"; return stringTemp
     total **= 0.5; temp = str(function).replace(str(variables[0][0]), str(variables[0][1]))
     for i in range(1, len(variables)): temp = temp.replace(str(variables[i][0]), str(variables[i][1]))
-    print(temp)
     return [eval(temp), total]
 
 
