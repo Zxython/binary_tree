@@ -179,6 +179,8 @@ def arccot(expression):
 
 def log(expression, base=10):
     from sympy import log
+    if type(base) is variable:
+        return log(expression * 1, base * 1)
     return log(expression * 1, base)
 
 
