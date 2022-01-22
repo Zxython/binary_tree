@@ -125,16 +125,16 @@ y = variable(['y', None, None])
 
 z = variable(['z', None, None])
 
-equation1 = uncertainty(x ** 2 * y * z ** 3 + x * y ** 3 * z ** 2, x, y, z, equation=True)
+partial_derivates = uncertainty(x ** 2 * y * z ** 3 + x * y ** 3 * z ** 2, x, y, z, partial_derivatives=True)
 
-print(f"∂g/∂x = {equation1[0]}")
+print(f"∂g/∂x = {partial_derivates[0]}")
 
-print(f"∂g/∂y = {equation1[1]}")
+print(f"∂g/∂y = {partial_derivates[1]}")
 
-print(f"∂g/∂z = {equation1[2]}")
+print(f"∂g/∂z = {partial_derivates[2]}")
 
 print()
 
-equation2 = uncertainty(x ** 2 * y - x * y ** 2, x, y, equation=True)
+equation = uncertainty(x ** 2 * y - x * y ** 2, x, y, equation=True)
 
-print(f"δq = sqrt(({equation2[0]}) ** 2 * δx ** 2 + ({equation2[1]}) ** 2 * δy ** 2)")
+print(equation)
