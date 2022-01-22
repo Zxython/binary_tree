@@ -99,6 +99,7 @@ def uncertainty(function, *variables, equation=False, partial_derivatives=False)
     variables = list(variables); temp = []; total = 0
     for i, var in enumerate(variables):
         if type(var) is variable: variables[i] = var.variable
+    variables.sort(key=lambda x: (len(str(x[0]))), reverse=True)
     for i in range(len(variables)):
         if equation or partial_derivatives:
             temp.append(diff(function, variables[i][0])); continue
