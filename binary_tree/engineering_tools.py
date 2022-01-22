@@ -197,15 +197,15 @@ class engineering_tools:
             print("To use you must first create variables using the variable() method")
             print("Then simply input the formula you'd like to use and then list the variables used in the equation")
             print("After listing the variables you can enable partial derivatives which will cause the function to "
-                  "output the partial derivatives\nOr you can enable equation which will cause it to output"
+                  "output the partial derivatives\nOr you can enable equation which will cause it to output "
                   "the uncertainty equation for the specified function")
             print("Example: uncertainty(x ** 3 + 2 ** cos(y), x, y)")
-            
+
         @staticmethod
         def deg_to_rad():
             print("This will convert degrees into radians\n(note) the uncertainty method uses radians")
-        
+
         @staticmethod
         def trig_methods():
-            print("These trig methods are different from the ones found in the math module as they are compatible"
+            print("These trig methods are different from the ones found in the math module as they are compatible "
                   "with the variable() datatype")
