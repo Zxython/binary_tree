@@ -180,3 +180,31 @@ def arccot(expression):
 def deg_to_rad(degrees):
     from math import pi
     return degrees * pi / 180
+
+class engineering_tools:
+    class help:
+        @staticmethod
+        def variable():
+            print("The variable type is what engineering tools uses to do its calculations")
+            print("There are two ways to make a variable one as a list and one as an expression")
+            print("list method: var_name = variable(['var_name', value, uncertainty])")
+            print("expression method: var_name = variable('var_name = value +- uncertainty')")
+
+        @staticmethod
+        def uncertainty():
+            print("This will output a list the first element being the value and the second being its uncertainty")
+            print("To use you must first create variables using the variable() method")
+            print("Then simply input the formula you'd like to use and then list the variables used in the equation")
+            print("After listing the variables you can enable partial derivatives which will cause the function to "
+                  "output the partial derivatives\nOr you can enable equation which will cause it to output"
+                  "the uncertainty equation for the specified function")
+            print("Example: uncertainty(x ** 3 + 2 ** cos(y), x, y)")
+            
+        @staticmethod
+        def deg_to_rad():
+            print("This will convert degrees into radians\n(note) the uncertainty method uses radians")
+        
+        @staticmethod
+        def trig_methods():
+            print("These trig methods are different from the ones found in the mat module as they are compatible"
+                  "with the variable() datatype")
