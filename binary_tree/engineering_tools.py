@@ -89,15 +89,18 @@ class variable:
         return other.variable[0] % self.variable[0]
 
 
-def uncertainty(function, *variables):
+def uncertainty(function, *variables, equation=False):
     from sympy import diff
     variables = list(variables); temp = []; total = 0
     for i, var in enumerate(variables):
         if type(var) is variable: variables[i] = var.variable
     for i in range(len(variables)):
+        if equation:
+            temp.append(diff(function, variables[i][0])); continue
         temp.append(str(diff(function, variables[i][0])).replace(str(variables[0][0]), str(variables[0][1])))
         for j in range(1, len(variables)): temp[i] = temp[i].replace(str(variables[j][0]), str(variables[j][1]))
         total += eval(temp[i]) ** 2 * variables[i][2] ** 2
+    if equation: return temp
     total **= 0.5; return total
 
 
