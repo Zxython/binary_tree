@@ -1,7 +1,7 @@
 class variable:
     def __init__(self, variable):
         from sympy import symbols
-        if type(variable) is list: self.variable = [symbols(self, real=True)] + variable[1:]
+        if type(variable) is list: self.variable = [symbols(variable[0], real=True)] + variable[1:]
         if type(variable) is not str:
             return
         self.variable = variable.split("=")
@@ -27,7 +27,7 @@ class variable:
         if type(power) is variable:
             return self.variable[0] ** power.variable[0]
         return self.variable[0] ** power
-    
+
     def __rpow__(self, power, modulo=None):
         if type(power) is variable:
             return power.variable[0] ** self.variable[0]
@@ -106,7 +106,9 @@ def uncertainty(function, *variables, equation=False):
         for j in range(1, len(variables)): temp[i] = temp[i].replace(str(variables[j][0]), str(variables[j][1]))
         total += eval(temp[i]) ** 2 * variables[i][2] ** 2
     if equation: return temp
-    total **= 0.5; return total
+    total **= 0.5; temp = str(function).replace(str(variables[0][0]), str(variables[0][1]))
+    for i in range(1, len(variables)): temp = temp.replace(str(variables[i][0]), str(variables[i][1]))
+    return [eval(temp), total]
 
 
 def sin(expression):
