@@ -94,26 +94,37 @@ class variable:
         return other.variable[0] % self.variable[0]
 
 
-def uncertainty(function, *variables, equation=False, partial_derivatives=False):
+def uncertainty(function, *variables, equation=False, partial_derivatives=False, show_work=False):
     from sympy import diff, acsc, asec, acot, asin, acos, atan
-    from math import log
-    variables = list(variables); temp = []; total = 0
+    from math import log as lg, e
+    log = lambda x: lg(x) / lg(e)
+    variables = list(variables); temp = []; work = []; total = 0
     for i, var in enumerate(variables):
         if type(var) is variable: variables[i] = var.variable
     variables.sort(key=lambda x: (len(str(x[0]))), reverse=True)
     for i in range(len(variables)):
-        if equation or partial_derivatives:
-            temp.append(diff(function, variables[i][0])); continue
+        if equation or partial_derivatives: work.append(diff(function, variables[i][0])); continue
+        if show_work: work.append(diff(function, variables[i][0]))
         temp.append(str(diff(function, variables[i][0])).replace(str(variables[0][0]), str(variables[0][1])))
         for j in range(1, len(variables)): temp[i] = temp[i].replace(str(variables[j][0]), str(variables[j][1]))
         total += eval(temp[i]) ** 2 * variables[i][2] ** 2
-    if partial_derivatives: return temp
+    if partial_derivatives: return work
+    if show_work:
+        for i, derivative in enumerate(work): print(f"∂g/∂{str(variables[i][0])} = {derivative}")
     stringTemp = "sqrt("
-    if equation:
-        for i, val in enumerate(temp): stringTemp += f"({val}) ** 2 + δ{str(variables[i][0])} ** 2 + "
-        stringTemp += "\b\b\b)"; return stringTemp
+    if equation or show_work:
+        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 + δ{str(variables[i][0])} ** 2 + "
+        stringTemp += "\b\b\b)"
+        if equation: return stringTemp
+        print(f"q = {stringTemp}"); stringTemp = "sqrt("
+        for i in range(len(work)):
+            for j in range(len(work)): work[i] = str(work[i]).replace(str(variables[j][0]), str(variables[j][1]))
+        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 + {variables[i][2]} ** 2 + "
+        stringTemp += "\b\b\b)"
+        print(f"q = {stringTemp}")
     total **= 0.5; temp = str(function).replace(str(variables[0][0]), str(variables[0][1]))
     for i in range(1, len(variables)): temp = temp.replace(str(variables[i][0]), str(variables[i][1]))
+    if show_work: print(f"a = {temp}"); print(f"Answer = {eval(temp)} +- {total}"); return
     return [eval(temp), total]
 
 
