@@ -95,7 +95,7 @@ class variable:
 
 
 def uncertainty(function, *variables, equation=False, partial_derivatives=False, show_work=False):
-    from sympy import diff, acsc, asec, acot, asin, acos, atan
+    from sympy import diff, acsc, asec, acot, asin, acos, atan, sqrt
     from math import log as lg, e
     log = lambda x: lg(x) / lg(e)
     variables = list(variables); temp = []; work = []; total = 0
