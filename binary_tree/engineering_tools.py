@@ -113,13 +113,13 @@ def uncertainty(function, *variables, equation=False, partial_derivatives=False,
         for i, derivative in enumerate(work): print(f"∂g/∂{str(variables[i][0])} = {derivative}")
     stringTemp = "sqrt("
     if equation or show_work:
-        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 + δ{str(variables[i][0])} ** 2 + "
+        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 * δ{str(variables[i][0])} ** 2 + "
         stringTemp += "\b\b\b)"
         if equation: return stringTemp
         print(f"q = {stringTemp}"); stringTemp = "sqrt("
         for i in range(len(work)):
             for j in range(len(work)): work[i] = str(work[i]).replace(str(variables[j][0]), str(variables[j][1]))
-        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 + {variables[i][2]} ** 2 + "
+        for i, val in enumerate(work): stringTemp += f"({val}) ** 2 * {variables[i][2]} ** 2 + "
         stringTemp += "\b\b\b)"
         print(f"q = {stringTemp}")
     total **= 0.5; temp = str(function).replace(str(variables[0][0]), str(variables[0][1]))
